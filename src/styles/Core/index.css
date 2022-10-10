@@ -1,0 +1,88 @@
+:root {
+    --darkPurple: #271338;
+    --purple: #4c2a64;
+    --darkPink: #a84b94;
+    --lightPink: #efbcef;
+    --ultraLightBlue: #d7d5f3;
+    font-size: 20px;
+    font-family: 'Matias', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+}
+
+header {
+    /* background-color: #a84b94ad; */
+    display: grid;
+    justify-content: center;
+}
+
+    header h1 {
+        font-size: 3em;
+        align-self: center;
+        text-align: center;
+        margin-top:5%;
+        color: #271338;
+    }  
+
+main {
+    /* background-color: var(--ultraLightBlue); */
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+    height: 40vh;
+    padding-top: 5%;
+}
+
+    main .general-menu {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        font-size: 2em;
+    }
+
+        main .general-menu a {
+            text-decoration: none;
+            color: #271338;
+        }
+
+        @media (min-width:1300px) {
+            main .general-menu a:hover {
+                background-color: #4c2a64;
+                color: #a84b94;
+                padding: 10%;
+                border-radius: 50%;
+            }
+        }
+
+footer {
+    padding-top: auto;
+    /* background-color: var(--ultraLightBlue); */
+    display: grid;
+    padding-bottom: 5%;
+}
+
+    footer img {
+        justify-self: center;
+        width: 50%;
+        max-height: 100%;
+    }
+
+@font-face {
+    font-family: Matias;
+    src: url(../../fonts/Matias\ Webfont.ttf);
+}
+
+@media (max-width: 1300px) {
+    body{
+        height: 100vh;
+    }
+}

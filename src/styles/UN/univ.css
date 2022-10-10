@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --darkPurple: #271338;
+    --purple: #4c2a64;
+    --darkPink: #a84b94;
+    --lightPink: #efbcef;
+    --ultraLightBlue: #d7d5f3;
+    font-size: 16px;
+    font-family: 'Matias', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+    font-family: Matias;
+    src: url(../../fonts/Matias\ Webfont.ttf);
+}
+
+body {
+    display: grid;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(#d7d5f3, #a84b94);
+    min-height: 90vh;
+}
+
+    main .nav {
+        padding-top: 1%;
+        padding-left: 1%;
+        padding-right: 2%;
+        border-right: solid #271338;
+        border-bottom: solid #271338;
+        width: 10%;
+    }
+
+    @media (max-width: 800px) {
+        main .nav {
+            display: none;
+        }
+    }
+    
+        main .nav ol{
+            list-style-type: none;
+            display: grid;
+            gap: 2vh;
+            justify-content: center;
+        }
+
+            main .nav ol li {
+                width: 100%;
+                text-align: center;
+            }
+                main .nav ol li a {
+                    text-decoration: none;
+                    color: #271338;
+                    font-size: 1.3em;
+                    text-align: center;
+                }
+
+                    main .nav ol li:hover a {
+                        border-bottom: solid #271338;
+                    }
+    
+    main .meta-menu {
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: 2%;
+        display: none;
+    }
+
+        main .meta-menu ol {
+            list-style-type: none;
+            display: grid;
+            gap: 2vh;
+            justify-content: center;
+        }
+
+            main .meta-menu ol li {
+                width: 100%;
+                text-align: center;
+            }
+            
+                main .meta-menu ol li a{
+                    text-decoration: none;
+                    color: #271338;
+                    font-size: 1.3em;
+                    text-align: center;
+                }
+
+    main .main-part {
+        padding-top: 2%;
+        padding-left: 3%;
+    }
+
