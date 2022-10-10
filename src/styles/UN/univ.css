@@ -38,9 +38,20 @@ main {
         width: 10%;
     }
 
+    @media (min-width: 800px) {
+        main .nav {
+            display: hide;
+        }
+    }
+    
     @media (max-width: 800px) {
         main .nav {
-            display: none;
+            width: 100vw;
+            padding-bottom: 2%;
+        }
+        main {
+            min-height: 80vh;
+            flex-direction: column;
         }
     }
     
@@ -66,34 +77,12 @@ main {
                         border-bottom: solid #271338;
                     }
     
-    main .meta-menu {
-        margin-top: 1%;
-        margin-left: auto;
-        margin-right: 2%;
-        display: none;
-    }
-
-        main .meta-menu ol {
-            list-style-type: none;
-            display: grid;
-            gap: 2vh;
-            justify-content: center;
-        }
-
-            main .meta-menu ol li {
-                width: 100%;
-                text-align: center;
-            }
-            
-                main .meta-menu ol li a{
-                    text-decoration: none;
-                    color: #271338;
-                    font-size: 1.3em;
-                    text-align: center;
-                }
+    
 
     main .main-part {
         padding-top: 2%;
         padding-left: 3%;
     }
+
+
 

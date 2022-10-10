@@ -14,7 +14,8 @@
 
 main {
     background: linear-gradient(#d7d5f3, #a84b94);
-    min-height: 75vh;
+    min-height: 80vh;
+    display: flex;
 }
 
 .picture {

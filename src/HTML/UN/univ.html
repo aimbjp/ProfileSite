@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="../../styles/UN/univ.css">
     <link rel="stylesheet" href="../../styles/UN/footer.css">
     <link rel="stylesheet" href="../../styles/UN/header.css">
+    <script src="../../JavaScript/UN/header.js" defer></script>
 </head>
 <body>
     <header>
         <section class="nav" id="">
-            <img src="../../images/icons/header-main.png" alt="menu_button" class="back-nav-button" id="back_nav">
+            <img src="../../images/icons/header-main.png" alt="menu_button" class="back-nav-button main-nav" id="back_nav">
             <h2 class="main-nav" id="main_menu">
                 Menu
             </h2>
@@ -23,9 +24,19 @@
             </h2>
             <img src="../../images/icons/header-meta.png" alt="back menu button" class="back-menu-button meta-nav" id="back_menu">
         </section>
+        <section class="meta-menu hide" id="meta-menu">
+            <ol>
+                <li>
+                    <a href="../../index.html">General menu</a>
+                </li>
+                <li id="univ"> 
+                    <a href="univ.html">University</a>
+                </li>
+            </ol>
+        </section>
     </header>
     <main>
-        <nav class="nav" id="nav">
+        <nav class="nav hide" id="nav">
             <ol class="nav-list" id="nav_list">
                 <li class="link" id="picture_css">
                     <a href="picture.html">Picture (css)</a>
@@ -40,16 +51,6 @@
                 Somthing
             </h1>
         </div>
-        <section class="meta-menu" id="meta-menu">
-            <ol>
-                <li>
-                    <a href="../../index.html">General menu</a>
-                </li>
-                <li id="univ"> 
-                    <a href="univ.html">University</a>
-                </li>
-            </ol>
-        </section>
     </main>
     <footer>
         <section class="contacts" id="contacts">

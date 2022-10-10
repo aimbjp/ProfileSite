@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="../../styles/UN/footer.css">
     <link rel="stylesheet" href="../../styles/UN/header.css">
     <title>flexbox-page</title>
+    <script src="../../JavaScript/UN/header.js" defer></script>
+
 </head>
 <body>
     <header>
         <section class="nav" id="">
-            <img src="../../images/icons/header-main.png" alt="menu_button" class="back-nav-button" id="back_nav">
-            <h2 class="main-nav" id="main_menu">
-                Menu
+            <a href="../../HTML/UN/univ.html">
+            <img src="../../images/icons/cross.png" alt="menu_button" class="back-nav-button main-nav" id="exitImg">
+            </a>
+            <h2 class="exit" id="exitH2">
+                Exit
             </h2>
         </section>
         <section class="back-nav" id="back-nav">
@@ -22,6 +26,16 @@
                 Meta-menu
             </h2>
             <img src="../../images/icons/header-meta.png" alt="back menu button" class="back-menu-button meta-nav" id="back_menu">
+        </section>
+        <section class="meta-menu hide" id="meta-menu">
+            <ol>
+                <li>
+                    <a href="../../index.html">General menu</a>
+                </li>
+                <li id="univ"> 
+                    <a href="univ.html">University</a>
+                </li>
+            </ol>
         </section>
     </header>
     <main>
