@@ -37,17 +37,12 @@ main {
         border-bottom: solid #271338;
         width: 10%;
     }
-
-    @media (min-width: 800px) {
-        main .nav {
-            display: hide;
-        }
-    }
     
     @media (max-width: 800px) {
         main .nav {
             width: 100vw;
             padding-bottom: 2%;
+            border-right: none;
         }
         main {
             min-height: 80vh;

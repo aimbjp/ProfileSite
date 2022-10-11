@@ -1,0 +1,46 @@
+:root {
+    font-size: 16px;
+    font-family: 'Matias', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+header {
+    align-self: flex-start;
+}
+
+    header a{
+        text-decoration: none;
+        font-size: 1.3em;
+    }
+
+main {
+    padding-top: 5%;
+    display: grid;
+    gap: 5vh;
+}
+
+    main h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    main .links {
+
+    }
+
+@font-face {
+    font-family: Matias;
+    src: url(../../fonts/Matias\ Webfont.ttf);
+}
