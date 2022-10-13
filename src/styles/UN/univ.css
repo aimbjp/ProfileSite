@@ -22,62 +22,55 @@ body {
     display: grid;
 }
 
-main {
+.main {
     display: flex;
-    flex-wrap: wrap;
     background: linear-gradient(#d7d5f3, #a84b94);
     min-height: 90vh;
 }
 
-    main .nav {
+    .main .nav {
         padding-top: 1%;
         padding-left: 1%;
         padding-right: 2%;
         border-right: solid #271338;
         border-bottom: solid #271338;
-        width: 10%;
+        min-width: 15vw;
     }
     
     @media (max-width: 800px) {
-        main .nav {
+        .main .nav {
             width: 100vw;
             padding-bottom: 2%;
             border-right: none;
         }
-        main {
+        .main {
             min-height: 80vh;
             flex-direction: column;
         }
     }
     
-        main .nav ol{
+        .main .nav .nav-list{
             list-style-type: none;
             display: grid;
             gap: 2vh;
             justify-content: center;
         }
 
-            main .nav ol li {
+            .main .nav .nav-list .link {
                 width: 100%;
                 text-align: center;
             }
-                main .nav ol li a {
+                .main .nav .nav-list .link .link-in-menu {
                     text-decoration: none;
                     color: #271338;
                     font-size: 1.3em;
                     text-align: center;
                 }
 
-                    main .nav ol li:hover a {
+                    .main .nav .nav-list .link:hover .link-in-menu {
                         border-bottom: solid #271338;
                     }
     
-    
-
-    main .main-part {
-        padding-top: 2%;
-        padding-left: 3%;
-    }
 
 
 
