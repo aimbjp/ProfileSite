@@ -29,15 +29,16 @@ main {
     padding-top: 5%;
     display: grid;
     gap: 5vh;
+    
 }
 
     main h1 {
         font-size: 3em;
         text-align: center;
     }
-
-    main .links {
-
+    
+    main a {
+        text-decoration: none;
     }
 
 @font-face {

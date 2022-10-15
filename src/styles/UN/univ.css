@@ -71,6 +71,47 @@ body {
                         border-bottom: solid #271338;
                     }
     
+.main-part h1, .main-part h2{
+    text-align: center;
+}
+
+.main-part h1 {
+    line-height: 2;
+}
+
+.main-part h2 {
+    line-height: 3;
+}
+
+.main-part p {
+    text-align: justify;
+    line-height: 2;
+    font-size: 1.4em;
+    text-indent: 2%;
+}
+
+@media (max-width: 768px) {
+    .main-part p {
+        text-align: justify;
+        line-height: 1.5;
+        font-size: 1em;
+        text-indent: 4%;
+    }
+    .main-part h1 {
+        font-size: 1.7em;
+    }
+    
+    .main-part h2 {
+        padding-bottom: 4vw;
+        font-size: 1.6em;
+    }
+}
+
+.main-part {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
 
 
 
