@@ -4,7 +4,7 @@
     --darkPink: #a84b94;
     --lightPink: #efbcef;
     --ultraLightBlue: #d7d5f3;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Matias', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -24,10 +24,10 @@ header {
 }
 
     header h1 {
-        font-size: 2.5em;
+        font-size: 2em;
         align-self: center;
         text-align: center;
-        margin-top:5%;
+        margin-top: 5%;
         color: #271338;
     }  
 
@@ -42,7 +42,7 @@ main {
 
     main .general-menu {
         display: grid;
-        justify-content: center;
+        justify-items: center;
         align-items: center;
         text-align: center;
         padding: 0;
@@ -52,29 +52,32 @@ main {
 
         main .general-menu a {
             text-decoration: none;
-            color: #271338;
+            color: #a84b94;
         }
 
         @media (min-width:1300px) {
             main .general-menu a:hover {
-                background-color: #4c2a64;
-                color: #a84b94;
-                padding: 10%;
-                border-radius: 50%;
+                border-bottom-left-radius: 10%;
+                border-bottom-right-radius: 10%;
+                color: #271338;
+                animation-name: borderBottom;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
             }
             header h1 {
-                font-size: 3em;
+                font-size: 2em;
             }  
         }
 
 footer {
     /* background-color: var(--ultraLightBlue); */
     display: grid;
+    margin-top: 5vh;
 }
 
     footer img {
         justify-self: center;
-        width: 50%;
+        width: 30%;
         max-height: 100%;
     }
 
@@ -83,3 +86,21 @@ footer {
     src: url(../../fonts/Matias\ Webfont.ttf);
 }
 
+@keyframes borderBottom {
+    0% {
+        border-bottom: 5px solid #a84b9445;
+    }
+    25% {
+        border-bottom: 5px solid #a84b947c;
+    }
+    50% {
+        border-bottom: 5px solid #a84b94ad;
+    }
+    75% {
+        border-bottom: 5px solid #a84b94e3;
+    }
+    100% {
+        border-bottom: 5px solid #a84b94;
+        
+    }
+}
