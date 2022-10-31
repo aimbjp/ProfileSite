@@ -1,0 +1,211 @@
+@font-face {
+    font-family: Matias;
+    src: url(../../fonts/Matias\ Webfont.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: Matias;
+    user-select: none;
+}
+
+nav {
+    display: none;
+}
+
+.r-content {
+    display: grid;
+    width: 50vw;
+    margin: auto;
+}
+
+.rc-header{
+    display: flex;
+    
+}
+
+.rc-h-img {
+    width: 13vw;
+}
+
+.rc-h-info {
+    margin-left: 1vw;
+    padding-left: 2vw;
+    background-color: rgb(255, 213, 0);
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.rc-h-i-name {
+    align-self: flex-end;
+    padding-bottom: 0.5vh;
+    font-size: 4em;
+    font-weight: 400;
+}
+
+.rc-h-i-current {
+    align-self: baseline;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+.rc-main-part {
+    display: flex;
+    padding: 1% 5% 1% 2%;
+}
+
+.rc-mp-aside {
+    display: grid;
+    gap: 4vh;
+    padding-right: 5%;
+}
+
+.rc-mp-a-details {
+    display: grid;
+}
+
+.rc-mp-b-header {
+    display: grid;
+    padding-bottom: 2vh;
+}
+
+.rc-mp-b-h-text {
+    font-size: 2em;
+}
+
+.rc-mp-b-h-underline {
+    background-color: rgb(105, 105, 105);
+    width: 50px;
+    height: 3px;
+}
+
+.rc-mp-ad-list, .rc-mp-as-list, .rc-mp-al-list{
+    list-style: none;
+    display: grid;
+    gap: 1.5vh;
+}
+
+.rc-mp-ad-item{
+    display: grid;
+    gap:0.8vh;
+}
+
+.rc-mp-ad-i-header, .rc-mp-as-i-header, .rc-mp-al-i-header{
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.rc-mp-ad-i-text, .rc-mp-as-i-header, .rc-mp-al-i-header, 
+.rc-mp-mp-text, .rc-mp-me-i-header, .rc-mp-period-span,
+.rc-mp-meh-i-header, .rc-mp-location-span, .rc-mp-meh-lr-text{
+    user-select: text;
+}
+
+.rc-mp-ad-it-link{
+    text-decoration: none;
+    color: black;
+    user-select: text;
+
+}
+
+.rc-mp-main{
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.rc-mp-mp-text{
+    font-size: 1.3em;
+    font-weight: 100;
+    text-align: inherit;
+}
+
+.rc-mp-me-list, .rc-mp-meh-list, {
+    display: grid;
+    list-style: none;
+}
+
+.rc-mp-me-item, .rc-mp-meh-list, .rc-mp-meh-item{
+    display: grid;
+    gap: 1vh;
+}
+
+.rc-mp-me-i-info, .rc-mp-meh-i-info {
+    display: flex;
+    width: 100%;
+}
+
+.rc-mp-location-span {
+    margin-left: auto;
+    font-size: 0.8em;
+    font-weight: 900;
+}
+
+.rc-mp-me-i-header, .rc-mp-meh-i-header {
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.rc-mp-period-span {
+    opacity: 0.7;
+    margin-top: -1vh;
+    font-size: 0.8em;
+}
+
+.rc-mp-meh-l-responsibilities {
+    padding-left: 2vw;
+    padding-top: 1vh;
+    display: grid;
+    gap: 1vh;
+}
+
+@media (max-width: 1200px){
+    .r-content {
+        width: 100vw;
+    }
+    .rc-h-img {
+        width: 20vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .rc-h-img {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .rc-h-img {
+        width: 50vw;
+    }
+    *{
+        font-size: 8px;
+    }
+    .rc-main-part{
+        display: grid;
+        gap: 2vh;
+        margin-right: 2vw;
+        margin-left: 4vw;
+    }
+    .rc-mp-aside{
+        order: 2;
+        display: flex;
+        width: 100%;
+        padding-right: 0;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    .rc-mp-main {
+        gap: 4vh;
+    }
+    .rc-mp-meh-l-responsibilities {
+        padding-left: 5vw;
+    }
+    .rc-mp-b-h-underline {
+        width: 20px;
+        height: 2px;
+    }
+}
