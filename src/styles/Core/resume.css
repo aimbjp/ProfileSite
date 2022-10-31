@@ -162,7 +162,7 @@ nav {
     gap: 1vh;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1220px){
     .r-content {
         width: 100vw;
     }
@@ -207,5 +207,11 @@ nav {
     .rc-mp-b-h-underline {
         width: 20px;
         height: 2px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .rc-h-img {
+        width: 10vw;
     }
 }
