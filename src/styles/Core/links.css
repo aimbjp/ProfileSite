@@ -8,40 +8,138 @@
     margin: 0;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    min-height: 60vh;
-}
-
-header {
-    align-self: flex-start;
-}
-
-    header a{
-        text-decoration: none;
-        font-size: 1.3em;
-    }
-
-main {
-    padding-top: 5%;
-    display: grid;
-    gap: 5vh;
-    
-}
-
-    main h1 {
-        font-size: 3em;
-        text-align: center;
-    }
-    
-    main a {
-        text-decoration: none;
-    }
-
 @font-face {
     font-family: Matias;
     src: url(../../fonts/Matias\ Webfont.ttf);
+}
+
+.l-container {
+    display: grid;
+    justify-items: center;
+    padding-top: 3vh;
+    gap: 5vh;
+}
+
+.lc-header {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.lc-hp-img {
+    width: 15vw;
+    border-radius: 50%;
+}
+
+.lc-hn-text {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.lc-main {
+    display: grid;
+    gap: 10vh;
+}
+
+.lc-m-links {
+    display: grid;
+    gap: 7vh;
+    justify-items: center;
+    font-size: 1.5em;
+    min-width: 40vw;
+}
+
+.lc-ml-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-items: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.lc-ml-item {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 1vh;
+    min-width: 10vw;
+}
+
+.lc-m-works {
+    display: grid;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.lc-header-2 {
+    text-align: center;
+    font-weight: 300;
+
+}
+
+.lc-mw-list {
+    list-style: none;
+    display: flex;
+    gap: 5vw;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lc-mw-item {
+    display: grid;
+    gap: 1vh;
+    min-width: 20vw;
+    justify-items: center;
+    align-items: center;
+}
+
+.lc-m-works {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    * {
+        font-size: 16px;
+    }
+    .r-content {
+        padding: 1%;
+    }
+    .lc-ml-l-img {
+        width: 20vw;
+    }
+    .lc-ml-item {
+        width: 40vw;
+    }
+    .lc-ml-list, .lc-mw-list {
+        display: grid;
+        grid-template-columns: repeat(2, 40vw);
+        align-items: center;
+        justify-items: center;
+    }
+    .lc-m-links {
+        gap: 4vh;
+    }
+    .lc-hp-img {
+        width: 30vw;
+    }
+    .lc-h-name {
+        font-size: 0.6em;
+    }
+    .lc-hn-subtext {
+        font-size: 1em;
+    }
+    .lc-header-2 {
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+}
+
+.lc-bh2-link {
+    text-decoration: none;
+    color: black;
 }
