@@ -4,12 +4,19 @@ const l3 = document.getElementById('lamp3');
 const complexity = document.getElementById('flc-s-complexity');
 const conversation = document.querySelector('.flc-results');
 const scoreRes = document.querySelector('.flh-s-txt');
+const name = document.querySelector('.flh-s-name');
 
+let score;
 let result = [];
 let userResult = [];
-let score = 5;
+console.log(JSON.parse(localStorage.getItem('00001')).lvl);
+
+
+score = +localStorage.getItem(localStorage.getItem('00001'));
 
 const start = document.querySelector('.flc-s-btn');
+
+name.innerHTML += ' ' + JSON.parse(localStorage.getItem('00001')).name;
 
 if (score < 5) {
     complexity.value = 'easy';
@@ -29,14 +36,14 @@ start.addEventListener('click', () =>{
         conversation.innerHTML = 'Легкий уровень, отсчитывай время!'
 
         l1.classList.add('on');
-        let randomTime = Math.random() * 10;
+        let randomTime = Math.random() * 8;
         randomTime = randomTime < 5 ? randomTime + 5 : randomTime;
 
         setTimeout(function () {
             l2.classList.add('on');
             result.push(randomTime);
-            randomTime = Math.random() * 10;
-            randomTime = randomTime < 5 ? randomTime + 5 : randomTime;
+            randomTime = Math.random() * 8;
+            randomTime = randomTime < 5 ? randomTime + 3 : randomTime;
         }, randomTime * 1000);
 
         setTimeout(function () {
@@ -110,7 +117,7 @@ start.addEventListener('click', () =>{
                         }
                         result = [];
                         userResult = [];
-                        
+                        localStorage.setItem(localStorage.getItem('00001'), score);
                         if(score >= 5) {
                             complexity.value = 'medium';
                             scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Средняя сложность' 
@@ -133,13 +140,13 @@ start.addEventListener('click', () =>{
         conversation.innerHTML = 'Средний уровень, отсчитывай время!'
 
         l1.classList.add('on');
-        let randomTime = Math.random() * 10;
+        let randomTime = Math.random() * 7;
         randomTime = randomTime < 3 ? randomTime + 2 : randomTime;
 
         setTimeout(function () {
             l2.classList.add('on');
             result.push(randomTime);
-            randomTime = Math.random() * 10;
+            randomTime = Math.random() * 7;
             randomTime = randomTime < 3 ? randomTime + 2 : randomTime;
         }, randomTime * 1000);
 
@@ -215,7 +222,7 @@ start.addEventListener('click', () =>{
                         }
                         result = [];
                         userResult = [];
-                        
+                        localStorage.setItem(localStorage.getItem('00001'), score)
                         if(score >= 12) {
                             complexity.value = 'hard';
                             scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Сложная сложность' 
@@ -245,12 +252,12 @@ start.addEventListener('click', () =>{
         conversation.innerHTML = 'Сложный уровень, отсчитывай время!'
 
         l1.classList.add('on');
-        let randomTime = Math.random() * 10;
+        let randomTime = Math.random() * 5;
 
         setTimeout(function () {
             l2.classList.add('on');
             result.push(randomTime);
-            randomTime = Math.random() * 10;
+            randomTime = Math.random() * 5;
         }, randomTime * 1000);
 
         setTimeout(function () {
@@ -324,7 +331,7 @@ start.addEventListener('click', () =>{
                         }
                         result = [];
                         userResult = [];
-                        
+                        localStorage.setItem(localStorage.getItem('00001'), score)
                         setTimeout(function () {
                             conversation.innerHTML = 'Пора снова в бой, жми кнопку!';
                         }, 2000)

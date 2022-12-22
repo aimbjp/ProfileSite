@@ -5,34 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2 уровень</title>
+    <link rel="stylesheet" href="../../../styles/UN/Game/1lvl.css">
+    <link rel="stylesheet" href="../../../styles/UN/Game/2lvl.css">
+    <script src="../../../JavaScript/UN/Game/2lvl.js" defer></script>
 </head>
 <body>
-    <header class="2l-header">
-        <div class="2lh-items">
-            <section class="2lh-header">
-                <h1>Помоги мышке добраться до норки</h1>
+    <header class="fl-header">
+        <div class="flh-items">
+            <section class="flh-header">
+                <h1 class="flh-h-header">Лабиринт</h1>
+                <p>Проведи мышку к норке, сковзь кустики проходить нельзя</p>
             </section>
-            <section class="2lh-about">
-                <p>Тебе нужно перетащить мышьку в норку не задевая препятствия за обусловленное время.</p>
+            <section class="flh-score">
+                <h2 class="flh-s-name">Имя: </h2>
+                <h2 class="flh-s-txt">Тубрики: 0<br>Легкая сложность</h2>
             </section>
-            <section class="2lh-score">
-                <h2>Тубрики: 0</h2>
-            </section>
-            <section class="2lh-exit">
-                <a href="../Fgame.html">Выйти</a>
+            <section class="flh-exit">
+                <a href="../Fgame.html" class="flh-e-txt">Выйти</a>
             </section>
         </div>
     </header>
-    <main class="2l-content">
-        <section class="2lc-lamp">
+    <main class="fl-content">
+
+        <section class="flc-results">
+            Нажми на кнопку начать
+        </section>
+        <section class="time">
 
         </section>
-        <section class="2lc-start">
-            <select name="2lc-s-complexity" id="2lc-s-complexity">
+        <section class="flc-start">
+            <select name="flc-s-complexity" id="flc-s-complexity">
                 <option value="easy">Легкий</option>
+                <option value="medium">Средний</option>
                 <option value="hard">Сложный</option>
             </select>
-            <button class="2lc-s-btn" type="submit">Начать</button>
+            <button class="flc-s-btn">Начать</button>
         </section>
     </main>
     <footer>

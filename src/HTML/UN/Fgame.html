@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" href="../../styles/UN/Game/lobby.css">
+    <script src="../../JavaScript/UN/Game/FGlobby.js" defer></script>
 </head>
 <body>
     <header class="game-header">
@@ -13,11 +14,12 @@
     </header>
     <main class="game-content">
         <div class="gc-form">
-            <input type="text" placeholder="Ваше имя" class="gc-f-name" id="name">
+            <input type="text" placeholder="Ваше имя" class="gc-f-name" id="name" required>
             <p class="gc-txt">Выберите уровень:</p>
-            <a href="Game/FGlvl1.html"><button class="gc-f-btn">1 уровень</button></a>
-            <a href="Game/FGlvl2.html"><button class="gc-f-btn">2 уровень</button></a>
-            <a href="Game/FGlvl3.html"><button class="gc-f-btn">3 уровень</button></a>
+            <a href="Game/FGlvl1.html"><button class="gc-f-btn" id="1">1 уровень</button></a>
+            <a href="Game/FGlvl2.html"><button class="gc-f-btn" id="2">2 уровень</button></a>
+            <a href="Game/FGlvl3.html"><button class="gc-f-btn" id="3">3 уровень</button></a>
+            <a href="Game/rate.html"><button class="gc-f-btn" id="4">Рейтинг</button></a>
         </div>
     </main>
     <footer>

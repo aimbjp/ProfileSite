@@ -12,6 +12,7 @@
 .flh-items{
     display: flex;
     gap: 5vw;
+    width: 100vw;
 }
 
 .flh-header {
@@ -33,6 +34,10 @@
 
 .flh-e-txt {
     text-decoration: none;
+}
+
+.flh-exit{
+    margin-left: auto;
 }
 
 .lamp {
