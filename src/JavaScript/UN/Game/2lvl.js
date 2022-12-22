@@ -94,6 +94,8 @@ const lab = function(height, width, maze, walls, currentPosition, time) {
                 conversation.innerHTML = 'Увы ты теряешь тубрик, попробуй еще!';
                 document.querySelector('.time').innerHTML = 'Время вышло';
                 clearInterval(timer);
+                start.style.display = 'block';
+
             } else {
                 document.querySelector('.time').innerHTML = time + ' секунд';
             }  
@@ -137,7 +139,9 @@ const lab = function(height, width, maze, walls, currentPosition, time) {
                             document.getElementById('maze').remove();
                             mouse.remove();
                             conversation.innerHTML = 'Ты молодец, получай 3 тубрика! <br>Нажми на кнопку';
-                            clearInterval(timer)
+                            clearInterval(timer);
+                start.style.display = 'block';
+
                         }
                     }
                 
@@ -150,6 +154,8 @@ const lab = function(height, width, maze, walls, currentPosition, time) {
     
         
 start.addEventListener('click', function (e) {
+    start.style.display = 'none';
+
     conversation.innerHTML = 'Помоги мышке, перетащи ее';
     if (complexity.value =='easy') { 
         document.querySelector('.fl-content').prepend(document.createElement('div'))
