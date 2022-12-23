@@ -102,7 +102,24 @@ start.addEventListener('click', function listen(e) {
             fruct.style.zIndex = c;
             game.appendChild(fruct);
             game.lastChild.style.left = Math.random() * 1000 < 1000 ? Math.random() * 1000 + 'px' : Math.random() * 1000 + Map.random() * 400 + 'px';
-            game.lastChild.style.top = game.getBoundingClientRect().bottom - 150 + 'px';
+           
+           
+            let position = game.getBoundingClientRect().top;
+            let ti = setInterval( function() {
+                let timePassed = Date.now() - start;
+                position += 1
+                if (position + 20 < (game.getBoundingClientRect().bottom - 150) || timePassed > 20000) {
+                    game.lastChild.style.top = game.getBoundingClientRect().bottom - 150 + 'px';
+                    clearInterval(ti);
+                };
+                if (position  < (document.querySelector('.racoon').style.top - 150)){
+                    animation();
+                }
+            }, 1000);
+    
+            const animation = () => {
+                game.lastChild.style.top = position + 'px';
+            };
             fruits = document.querySelectorAll('.fr');
             c++;
         }

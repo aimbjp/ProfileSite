@@ -102,50 +102,76 @@ const lab = function(height, width, maze, walls, currentPosition, time) {
             time --;
         }, 1000);
 
-        mouse.onmousedown = function move(e) {
-            mouse.style.position = 'absolute';
-            moveAt(e);
+        // mouse.onmousedown = function move(e) {
+        //     mouse.style.position = 'absolute';
+        //     moveAt(e);
          
 
-            function moveAt(e) {
-                mouse.style.left = e.pageX - mouse.offsetWidth / 2 + 'px';
-                mouse.style.top = e.pageY - mouse.offsetHeight / 2 + 'px';
-            }
+        //     function moveAt(e) {
+        //         mouse.style.left = e.pageX - mouse.offsetWidth / 2 + 'px';
+        //         mouse.style.top = e.pageY - mouse.offsetHeight / 2 + 'px';
+        //     }
 
 
-            document.onmousemove = function(e) {
-                    moveAt(e);
+        //     document.onmousemove = function(e) {
+        //             moveAt(e);
 
-            } 
+        //     } 
 
-        mouse.onmouseup = function() {
-            document.onmousemove = null;
-            mouse.onmouseup = null;
-            if (mouse.getBoundingClientRect().x - finish.getBoundingClientRect().x < 2 && mouse.getBoundingClientRect().x - finish.getBoundingClientRect().x > -2
-                        && mouse.getBoundingClientRect().y - finish.getBoundingClientRect().y < 2 && mouse.getBoundingClientRect().y - finish.getBoundingClientRect().y > -2)
-                        {
-                            score += 3;
-                            localStorage.setItem(localStorage.getItem('00001'), score);
-                            if (score < 5) {
-                                complexity.value = 'easy';
-                                scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Легкая сложность' 
-                            } else if (score < 12) {
-                                complexity.value = 'medium';
-                                scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Средняя сложность' 
-                            } else {
-                                complexity.value = 'hard';
-                                scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Сложная сложность' 
-                            };
-                            document.getElementById('maze').remove();
-                            mouse.remove();
-                            conversation.innerHTML = 'Ты молодец, получай 3 тубрика! <br>Нажми на кнопку';
-                            clearInterval(timer);
-                start.style.display = 'block';
+        // mouse.onmouseup = function() {
+        //     document.onmousemove = null;
+        //     mouse.onmouseup = null;
+        //     if (mouse.getBoundingClientRect().x - finish.getBoundingClientRect().x < 2 && mouse.getBoundingClientRect().x - finish.getBoundingClientRect().x > -2
+        //                 && mouse.getBoundingClientRect().y - finish.getBoundingClientRect().y < 2 && mouse.getBoundingClientRect().y - finish.getBoundingClientRect().y > -2)
+        //                 {
+        //                     score += 3;
+        //                     localStorage.setItem(localStorage.getItem('00001'), score);
+        //                     if (score < 5) {
+        //                         complexity.value = 'easy';
+        //                         scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Легкая сложность' 
+        //                     } else if (score < 12) {
+        //                         complexity.value = 'medium';
+        //                         scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Средняя сложность' 
+        //                     } else {
+        //                         complexity.value = 'hard';
+        //                         scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Сложная сложность' 
+        //                     };
+        //                     document.getElementById('maze').remove();
+        //                     mouse.remove();
+        //                     conversation.innerHTML = 'Ты молодец, получай 3 тубрика! <br>Нажми на кнопку';
+        //                     clearInterval(timer);
+        //         start.style.display = 'block';
 
-                        }
-                    }
+        //                 }
+        //             }
                 
-            
+                    document.body.onkeydown = function(e) {
+                        var newPosition = [currentPosition[0] + ((e.keyCode - 39) % 2), currentPosition[1] + ((e.keyCode - 38) % 2)];
+                        if (valid(newPosition[0], newPosition[1]) && maze[newPosition[0]][newPosition[1]] != 'wall') {
+                          document.getElementById(currentPosition[0] + '-' + currentPosition[1]).className = 'block';
+                          currentPosition = newPosition;
+                          document.getElementById(currentPosition[0] + '-' + currentPosition[1]).className = 'block cur';
+                          if (currentPosition[0] == height - 1 && currentPosition[1] == width - 1) 
+                            {
+                                score += 3;
+                                localStorage.setItem(localStorage.getItem('00001'), score);
+                                if (score < 5) {
+                                    complexity.value = 'easy';
+                                    scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Легкая сложность' 
+                                } else if (score < 12) {
+                                    complexity.value = 'medium';
+                                    scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Средняя сложность' 
+                                } else {
+                                    complexity.value = 'hard';
+                                    scoreRes.innerHTML = 'Тубрики: ' + score + '<br>Сложная сложность' 
+                                };
+                                document.getElementById('maze').remove();
+                                mouse.remove();
+                                conversation.innerHTML = 'Ты молодец, получай 3 тубрика! <br>Нажми на кнопку';
+                            clearInterval(timer);
+                                
+                                start.style.display = 'block';
+                            };}
             
     
         
