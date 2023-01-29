@@ -316,8 +316,14 @@ nav {
     background-color: rgb(0, 0, 0);
 }
 
-.rc-mp-as-iv-line-other-lang {
-    width: 70%;
+.rc-mp-as-iv-line-Csharp {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.rc-mp-as-iv-line-Cplus {
+    width: 30%;
     height: 100%;
     background-color: rgb(0, 0, 0);
 }
@@ -335,7 +341,7 @@ nav {
 }
 
 .rc-mp-as-iv-line-math {
-    width: 90%;
+    width: 70%;
     height: 100%;
     background-color: rgb(0, 0, 0);
 }
